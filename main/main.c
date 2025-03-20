@@ -114,7 +114,7 @@ void echo_task(void *p) {
     float vel_som = 0.03403;
     uint64_t dt;
     uint64_t tempos[2] = {0, 0};
-    int cont;
+    int cont = 0;
 
     while (1) {
         if (xQueueReceive(xQueueTempo, &dt,  pdMS_TO_TICKS(100))) {
